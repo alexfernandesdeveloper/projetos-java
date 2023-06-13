@@ -1,0 +1,59 @@
+import java.util.Scanner;
+public class contribuintes {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		
+		double salario = 0;
+		double prestacaoServico = 0;
+		double ganhoCap = 0;
+		double gastosMed = 0;
+		double gastosEdu = 0;
+		
+		System.out.println("Digite os dados do contribuinte");
+		System.out.println("Renda anual com salário: ");
+		salario = sc.nextDouble();
+		System.out.println("REnda anual com prestação de serviço: ");
+		prestacaoServico = sc.nextDouble();
+		System.out.println("Renda anual com ganho de capital: ");
+		ganhoCap = sc.nextDouble();
+		System.out.println("Gastos médicos: ");
+		gastosMed = sc.nextDouble();
+		System.out.println("Gastos educacionais: ");
+		gastosEdu = sc.nextDouble();
+		sc.close();
+		
+		if (salario < 3000.00) {
+			System.out.println("Isento");
+		}
+			else {
+				if (salario < 5000.00) {
+					salario = salario * 0.1;
+				}
+				else {
+					salario = salario * 0.2;
+				}
+			}
+		
+		if (prestacaoServico > 0) {
+			prestacaoServico = prestacaoServico * 0.15;
+		}
+		
+		if (ganhoCap > 0) {
+			ganhoCap = ganhoCap * 0.2;
+		}
+		
+		
+		
+		System.out.println("RELATÓRIO:");
+		System.out.println("Imposto sobre salário: ");
+		System.out.println("Imposto sobre serviços: ");
+		System.out.println("Imposto sobre ganho de capital: ");
+		System.out.println("Imposto bruto total: ");
+		System.out.println("Abatimento: ");
+		System.out.println("Imposto devido: ");
+			
+	}
+
+}

@@ -1,0 +1,19 @@
+package Entities;
+
+public class Bill {
+	
+	public static final double ingressoH = 10.0;
+	public static final double ingressoF = 8.0;
+	public static final double cerv = 5.0;
+	public static final double refri = 3.0;
+	
+	public static char gender;
+	public static int beer;
+	public static int barbecue;
+	public static int softDrink;
+	
+	public static double cover() {
+		
+	}
+
+}

@@ -1,0 +1,60 @@
+package atletas;
+
+import java.util.Scanner;
+
+public class atletas {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+
+		int n = 0;
+		String nome = "";
+		char sexo = '0';
+		double altura = 0;
+		double peso = 0;
+		double pesoMedio = 0;
+		double somaPeso = 0;
+		double maisAlto = 0;
+		double qtdH = 0;
+		double porH = 0;
+		String nomeMaisAlto = """;
+		
+
+		System.out.print("Qual a quantidade de atletas? ");
+		n = sc.nextInt();
+
+		for (int i = 1; i <= n; i++) {
+			System.out.println("Digite os dados do atleta número " + i + ":");
+
+			System.out.print("Nome: ");
+			nome = sc.next();
+
+			System.out.print("Sexo: ");
+			sexo = sc.next().charAt(0);
+			if (sexo == 'M') {
+				qtdH += 1;
+			}
+
+			System.out.print("Altura: ");
+			altura = sc.nextDouble();
+			if (altura > maisAlto) {
+				maisAlto = altura;
+			}
+
+			System.out.print("Peso: ");
+			peso = sc.nextDouble();
+			somaPeso = somaPeso + peso;
+
+		}
+		
+		pesoMedio = somaPeso / n;
+		porH = (qtdH / n) * 10;
+
+		System.out.println("Relatório:");
+		System.out.println("Peso médio dos atletas: " + pesoMedio);
+		System.out.println("Atleta mais alto: " + nomeMaisAlto);
+		System.out.println("Porcentagem de Homens: " + porH + " %");
+
+	}
+}

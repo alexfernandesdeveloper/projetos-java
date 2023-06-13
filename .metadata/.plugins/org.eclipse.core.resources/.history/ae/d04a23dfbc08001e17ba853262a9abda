@@ -1,0 +1,14 @@
+package Entities;
+
+public class Bill {
+	
+	public static char gender;
+	public static int beer;
+	public static int barbecue;
+	public static int softDrink;
+	
+	public static double cover() {
+		
+	}
+
+}

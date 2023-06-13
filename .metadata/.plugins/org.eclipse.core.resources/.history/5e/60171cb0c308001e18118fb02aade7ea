@@ -1,0 +1,44 @@
+package Entities;
+
+public class Bill {
+	
+	public static final double ingressoH = 10.0;
+	public static final double ingressoF = 8.0;
+	public static final double cerv = 5.0;
+	public static final double refri = 3.0;
+	public static final double espet = 7.0;
+	public static final double couverArt = 4.0;
+	public static final String isento = "Isento de Couvert";
+	
+	public static char gender;
+	public static int beer;
+	public static int barbecue;
+	public static int softDrink;
+	
+	public static double cover() {
+		return couverArt;
+	}
+	
+	public static double feeding() {
+		return (barbecue * espet) + (beer * cerv) + (softDrink * refri);
+	}
+	
+	public static double ticket() {
+		if(gender == 'M') {
+			return ingressoH;
+		}
+		else {
+			return ingressoF;
+		}
+	}
+	
+	public static double total() {
+		if(feeding() > 30.0) {
+			return feeding() + ticket() + cover();
+		}
+		else {
+			return 0;
+ 		}
+		
+	}
+}
